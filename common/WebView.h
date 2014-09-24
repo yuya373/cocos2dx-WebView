@@ -137,6 +137,8 @@ public:
     void setBounce(bool bounce);
     
     void setVarticalScrollIndicator(bool indicator);
+    
+    void setHorizontalScrollIndicator(bool indicator);
 
 private:
     cocos2d::plugin::WebViewImpl *_impl;

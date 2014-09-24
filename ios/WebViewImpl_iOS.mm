@@ -136,6 +136,10 @@ void WebViewImpl::setBounce(bool bounce) {
 void WebViewImpl::setVarticalScrollIndicator(bool indicator) {
     [_uiWebViewWrapper setVarticalScrollIndicator:indicator];
 }
+    
+void WebViewImpl::setHorizontalScrollIndicator(bool indicator) {
+    [_uiWebViewWrapper setHorizontalScrollIndicator:indicator];
+}
 } // namespace cocos2d
 } // namespace plugin
 

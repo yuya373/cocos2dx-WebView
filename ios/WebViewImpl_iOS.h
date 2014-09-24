@@ -55,6 +55,8 @@ public:
     void setBounce(bool bounce);
     
     void setVarticalScrollIndicator(bool indicator);
+    
+    void setHorizontalScrollIndicator(bool indicator);
 
 private:
     UIWebViewWrapper *_uiWebViewWrapper;
