@@ -89,6 +89,10 @@ void WebView::setVisible(bool visible) {
 void WebView::setBounce(bool bounce) {
     _impl->setBounce(bounce);
 }
+
+void WebView::setVarticalScrollIndicator(bool indicator) {
+    _impl->setVarticalScrollIndicator(indicator);
+}
 } // namespace cocos2d
 } // namespace plugin
 

@@ -132,6 +132,10 @@ void WebViewImpl::setVisible(bool visible) {
 void WebViewImpl::setBounce(bool bounce) {
     [_uiWebViewWrapper setBounce:bounce];
 }
+    
+void WebViewImpl::setVarticalScrollIndicator(bool indicator) {
+    [_uiWebViewWrapper setVarticalScrollIndicator:indicator];
+}
 } // namespace cocos2d
 } // namespace plugin
 

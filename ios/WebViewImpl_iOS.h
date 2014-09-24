@@ -53,6 +53,8 @@ public:
     virtual void setVisible(bool visible);
     
     void setBounce(bool bounce);
+    
+    void setVarticalScrollIndicator(bool indicator);
 
 private:
     UIWebViewWrapper *_uiWebViewWrapper;

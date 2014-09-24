@@ -135,6 +135,8 @@ public:
     virtual void setVisible(bool visible) override;
     
     void setBounce(bool bounce);
+    
+    void setVarticalScrollIndicator(bool indicator);
 
 private:
     cocos2d::plugin::WebViewImpl *_impl;
