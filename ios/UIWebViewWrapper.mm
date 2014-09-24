@@ -56,6 +56,10 @@
     self.uiWebView.hidden = !visible;
 }
 
+- (void)setBounce:(bool)bounce {
+    self.uiWebView.scrollView.bounces = bounce;
+}
+
 - (void)setFrameWithX:(float)x y:(float)y width:(float)width height:(float)height {
     if (!self.uiWebView) {[self setupWebView];}
     CGRect newFrame = CGRectMake(x, y, width, height);

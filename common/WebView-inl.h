@@ -85,6 +85,10 @@ void WebView::setVisible(bool visible) {
     Node::setVisible(visible);
     _impl->setVisible(visible);
 }
+
+void WebView::setBounce(bool bounce) {
+    _impl->setBounce(bounce);
+}
 } // namespace cocos2d
 } // namespace plugin
 

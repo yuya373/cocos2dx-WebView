@@ -128,6 +128,10 @@ void WebViewImpl::draw(cocos2d::Renderer *renderer, cocos2d::Mat4 const &transfo
 void WebViewImpl::setVisible(bool visible) {
     [_uiWebViewWrapper setVisible:visible];
 }
+    
+void WebViewImpl::setBounce(bool bounce) {
+    [_uiWebViewWrapper setBounce:bounce];
+}
 } // namespace cocos2d
 } // namespace plugin
 
