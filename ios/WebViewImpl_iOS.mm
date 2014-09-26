@@ -133,7 +133,7 @@ void WebViewImpl::setBounce(bool bounce) {
     [_uiWebViewWrapper setBounce:bounce];
 }
     
-void WebViewImpl::setVarticalScrollIndicator(bool indicator) {
+void WebViewImpl::setVerticalScrollIndicator(bool indicator) {
     [_uiWebViewWrapper setVarticalScrollIndicator:indicator];
 }
     

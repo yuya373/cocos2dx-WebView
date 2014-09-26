@@ -54,7 +54,7 @@ public:
     
     void setBounce(bool bounce);
     
-    void setVarticalScrollIndicator(bool indicator);
+    void setVerticalScrollIndicator(bool indicator);
     
     void setHorizontalScrollIndicator(bool indicator);
 

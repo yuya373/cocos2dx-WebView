@@ -90,8 +90,8 @@ void WebView::setBounce(bool bounce) {
     _impl->setBounce(bounce);
 }
 
-void WebView::setVarticalScrollIndicator(bool indicator) {
-    _impl->setVarticalScrollIndicator(indicator);
+void WebView::setVerticalScrollIndicator(bool indicator) {
+    _impl->setVerticalScrollIndicator(indicator);
 }
 
 void WebView::setHorizontalScrollIndicator(bool indicator) {

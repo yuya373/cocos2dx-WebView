@@ -133,11 +133,11 @@ public:
     virtual void draw(cocos2d::Renderer *renderer, cocos2d::Mat4 const &transform, uint32_t flags) override;
 
     virtual void setVisible(bool visible) override;
-    
+
     void setBounce(bool bounce);
-    
-    void setVarticalScrollIndicator(bool indicator);
-    
+
+    void setVerticalScrollIndicator(bool indicator);
+
     void setHorizontalScrollIndicator(bool indicator);
 
 private:
