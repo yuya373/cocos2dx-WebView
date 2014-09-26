@@ -8,19 +8,10 @@
 extern "C" {
 #endif
 /* Inaccessible static: handler */
+/* Inaccessible static: cocos2dxActivity */
+/* Inaccessible static: layout */
+/* Inaccessible static: webViews */
 /* Inaccessible static: viewTag */
-#undef org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskCreate
-#define org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskCreate 0L
-#undef org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskRemove
-#define org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskRemove 1L
-#undef org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskSetRect
-#define org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskSetRect 2L
-#undef org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskLoadURI
-#define org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskLoadURI 3L
-#undef org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskEvaluateJS
-#define org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskEvaluateJS 4L
-#undef org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskSetVisible
-#define org_cocos2dx_lib_Cocos2dxWebViewHelper_kWebViewTaskSetVisible 5L
 /*
  * Class:     org_cocos2dx_lib_Cocos2dxWebViewHelper
  * Method:    shouldStartLoading

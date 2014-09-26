@@ -98,6 +98,18 @@ public class Cocos2dxWebViewHelper {
     }
 
     @SuppressWarnings("unused")
+    public static void setBounce(final int index, final boolean bounce) {
+      cocos2dxActivity.runOnUiThread(new Runnable() {
+        @Override
+        public void run() {
+          Cocos2dxWebView webView = webViews.get(index);
+          if (webView != null) {
+            webView.setOverScrollMode(bounce ? View.OVER_SCROLL_ALWAYS : View.OVER_SCROLL_NEVER);
+          }
+        }
+      });
+    }
+
     public static void setWebViewRect(final int index, final int left, final int top, final int maxWidth, final int maxHeight) {
         cocos2dxActivity.runOnUiThread(new Runnable() {
             @Override

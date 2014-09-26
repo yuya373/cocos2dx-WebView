@@ -182,6 +182,14 @@ void setWebViewVisibleJNI(const int index, const bool visible) {
     }
 }
 
+void setWebViewBounceJNI(const int index, const bool bounce) {
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, CLASS_NAME, "setBounce", "(IZ)V")) {
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, index, bounce);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
 std::string getUrlStringByFileName(const std::string &fileName) {
     const std::string basePath("file:///android_asset/");
     std::string fullPath = cocos2d::FileUtils::getInstance()->fullPathForFilename(fileName);
@@ -330,5 +338,10 @@ void WebViewImpl::draw(cocos2d::Renderer *renderer, cocos2d::Mat4 const &transfo
 void WebViewImpl::setVisible(bool visible) {
     setWebViewVisibleJNI(_viewTag, visible);
 }
+
+void WebViewImpl::setBounce(bool bounce) {
+    setWebViewBounceJNI(_viewTag, bounce);
+}
+
 } // namespace cocos2d
 } // namespace plugin
