@@ -190,6 +190,14 @@ void setWebViewBounceJNI(const int index, const bool bounce) {
     }
 }
 
+void setWebViewVerticalScrollIndicatorJNI(const int index, const bool indicator) {
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, CLASS_NAME, "setVerticalScrollIndicator", "(IZ)V")) {
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, index, indicator);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
 std::string getUrlStringByFileName(const std::string &fileName) {
     const std::string basePath("file:///android_asset/");
     std::string fullPath = cocos2d::FileUtils::getInstance()->fullPathForFilename(fileName);
@@ -341,6 +349,10 @@ void WebViewImpl::setVisible(bool visible) {
 
 void WebViewImpl::setBounce(bool bounce) {
     setWebViewBounceJNI(_viewTag, bounce);
+}
+
+void WebViewImpl::setVerticalScrollIndicator(bool indicator) {
+  setWebViewVerticalScrollIndicatorJNI(_viewTag, indicator);
 }
 
 } // namespace cocos2d

@@ -110,6 +110,19 @@ public class Cocos2dxWebViewHelper {
       });
     }
 
+    @SuppressWarnings("unused")
+    public static void setVerticalScrollIndicator(final int index, final boolean indicator) {
+        cocos2dxActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Cocos2dxWebView webView = webViews.get(index);
+                if (webView != null) {
+                    webView.setVerticalScrollBarEnabled(indicator);
+                }
+            }
+        });
+    }
+
     public static void setWebViewRect(final int index, final int left, final int top, final int maxWidth, final int maxHeight) {
         cocos2dxActivity.runOnUiThread(new Runnable() {
             @Override

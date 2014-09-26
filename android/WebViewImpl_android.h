@@ -57,6 +57,7 @@ public:
     virtual void setVisible(bool visible);
 
     void setBounce(bool bounce);
+    void setVerticalScrollIndicator(bool indicator);
     static bool shouldStartLoading(const int viewTag, const std::string &url);
     static void didFinishLoading(const int viewTag, const std::string &url);
     static void didFailLoading(const int viewTag, const std::string &url);
