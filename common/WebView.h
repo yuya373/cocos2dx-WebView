@@ -14,6 +14,8 @@ class WebViewImpl;
 
 class WebView : public cocos2d::ui::Widget {
 public:
+    DECLARE_CLASS_GUI_INFO
+
     /**
     * Allocates and initializes a WebView.
     */
