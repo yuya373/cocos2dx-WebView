@@ -1,4 +1,4 @@
-package org.cocos2dx.lib;
+package org.cocos2dx.lib.webview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

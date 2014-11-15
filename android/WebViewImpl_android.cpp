@@ -4,14 +4,14 @@
 
 #include "WebViewImpl_android.h"
 #include "WebView.h"
-#include "org_cocos2dx_lib_Cocos2dxWebViewHelper.h"
+#include "org_cocos2dx_lib_webview_Cocos2dxWebViewHelper.h"
 #include "jni/JniHelper.h"
 #include "CCGLView.h"
 #include "base/CCDirector.h"
 #include "platform/CCFileUtils.h"
 #include <unordered_map>
 
-#define CLASS_NAME "org/cocos2dx/lib/Cocos2dxWebViewHelper"
+#define CLASS_NAME "org/cocos2dx/lib/webview/Cocos2dxWebViewHelper"
 
 namespace {
 int createWebViewJNI() {
