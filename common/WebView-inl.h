@@ -8,6 +8,8 @@
 
 namespace cocos2d {
 namespace plugin {
+IMPLEMENT_CLASS_GUI_INFO(WebView);
+
 WebView::WebView() : _impl(new WebViewImpl(this)) {
 }
 
