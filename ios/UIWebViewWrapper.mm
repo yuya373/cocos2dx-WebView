@@ -44,10 +44,6 @@
     if (!self.uiWebView) {
         self.uiWebView = [[[UIWebView alloc] init] autorelease];
         self.uiWebView.delegate = self;
-        // 初期設定：背景色なし、自動リンクなし
-        [self.uiWebView setOpaque:NO];
-        [self.uiWebView setBackgroundColor:[UIColor clearColor]];
-        self.uiWebView.dataDetectorTypes = UIDataDetectorTypeNone;
     }
     if (!self.uiWebView.superview) {
         auto view = cocos2d::Director::getInstance()->getOpenGLView();
