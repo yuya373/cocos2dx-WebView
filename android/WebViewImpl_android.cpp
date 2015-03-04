@@ -208,16 +208,26 @@ void setWebViewHorizontalScrollIndicatorJNI(const int index, const bool indicato
 
 std::string getUrlStringByFileName(const std::string &fileName) {
     const std::string basePath("file:///android_asset/");
+
     std::string fullPath = cocos2d::FileUtils::getInstance()->fullPathForFilename(fileName);
     const std::string assetsPath("assets/");
 
-    std::string urlString;
-    if (fullPath.find(assetsPath) != std::string::npos) {
-        urlString = fullPath.replace(fullPath.find_first_of(assetsPath), assetsPath.length(), basePath);
-    } else {
-        urlString = fullPath;
-    }
+    const std::string dataPath("/");
+    const std::string basePathForDataPath("file://");
 
+    std::string urlString;
+    auto pos = fullPath.find(dataPath);
+    if (pos == 0) {
+        // for load from download asset
+        urlString = basePathForDataPath + fullPath;
+    } else {
+        if (fullPath.find(assetsPath) != std::string::npos) {
+            // for load from bundle asset
+            urlString = fullPath.replace(fullPath.find_first_of(assetsPath), assetsPath.length(), basePath);
+        } else {
+            urlString = fullPath;
+        }
+    }
     return urlString;
 }
 } // namespace
