@@ -35,6 +35,7 @@
 }
 
 - (void)dealloc {
+    self.uiWebView.delegate = nil;
     [self.uiWebView removeFromSuperview];
     self.jsScheme = nil;
     [super dealloc];
