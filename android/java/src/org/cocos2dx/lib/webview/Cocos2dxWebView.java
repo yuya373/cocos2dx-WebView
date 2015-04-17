@@ -8,6 +8,7 @@ import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
+import android.graphics.Color;
 
 import java.lang.reflect.Method;
 import java.net.URI;
@@ -34,6 +35,8 @@ public class Cocos2dxWebView extends WebView {
         this.getSettings().setSupportZoom(false);
 
         this.getSettings().setJavaScriptEnabled(true);
+
+		this.setBackgroundColor(Color.TRANSPARENT);
 
         // `searchBoxJavaBridge_` has big security risk. http://jvn.jp/en/jp/JVN53768697
         try {
